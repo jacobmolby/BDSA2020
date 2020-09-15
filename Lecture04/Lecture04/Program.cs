@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿// using Microsoft.Extensions.Configuration;
 
 namespace Lecture04
 {
@@ -6,11 +6,11 @@ namespace Lecture04
     {
         static void Main(string[] args)
         {
-            var configuration = new ConfigurationBuilder()
-                .AddUserSecrets(typeof(Program).Assembly)
-                .Build();
+            // var configuration = new ConfigurationBuilder()
+            //     .AddUserSecrets(typeof(Program).Assembly)
+            //     .Build();
 
-            var connectionString = configuration.GetConnectionString("ConnectionString");
+            // var connectionString = configuration.GetConnectionString("ConnectionString");
         }
     }
 }

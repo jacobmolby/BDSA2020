@@ -1,51 +1,51 @@
-﻿using System;
+﻿// using System;
 
-namespace Lecture04
-{
-    public class RawSqlDemo
-    {
-        public static void Run(string connectionString)
-        {
-            using var raw = new RawSqlCharacterRepository(connectionString);
+// namespace Lecture04
+// {
+//     public class RawSqlDemo
+//     {
+//         public static void Run(string connectionString)
+//         {
+//             using var raw = new RawSqlCharacterRepository(connectionString);
 
-            Read(raw);
+//             Read(raw);
 
-            PrintHeader("READ('Turanga Leela')");
+//             PrintHeader("READ('Turanga Leela')");
 
-            var leela = raw.Read("Turanga Leela");
-            Console.WriteLine(leela);
+//             var leela = raw.Read("Turanga Leela");
+//             Console.WriteLine(leela);
 
-            PrintHeader("DELETE(2)");
+//             PrintHeader("DELETE(2)");
 
-            raw.Delete(2);
+//             raw.Delete(2);
 
-            Read(raw);
+//             Read(raw);
 
-            PrintHeader("UPDATE - move Fry to Mars");
+//             PrintHeader("UPDATE - move Fry to Mars");
 
-            var fry = raw.Read("Philip J. Fry");
-            fry.Planet = "Mars";
-            raw.Update(fry);
+//             var fry = raw.Read("Philip J. Fry");
+//             fry.Planet = "Mars";
+//             raw.Update(fry);
 
-            Read(raw);
-        }
+//             Read(raw);
+//         }
 
-        static void PrintHeader(string header)
-        {
-            Console.Write(new string('=', Console.WindowWidth));
-            Console.WriteLine(header);
-            Console.Write(new string('=', Console.WindowWidth));
-            Console.ReadKey();
-        }
+//         static void PrintHeader(string header)
+//         {
+//             Console.Write(new string('=', Console.WindowWidth));
+//             Console.WriteLine(header);
+//             Console.Write(new string('=', Console.WindowWidth));
+//             Console.ReadKey();
+//         }
 
-        static void Read(RawSqlCharacterRepository raw)
-        {
-            PrintHeader("READ");
+//         static void Read(RawSqlCharacterRepository raw)
+//         {
+//             PrintHeader("READ");
 
-            foreach (var character in raw.Read())
-            {
-                Console.WriteLine(character);
-            }
-        }
-    }
-}
+//             foreach (var character in raw.Read())
+//             {
+//                 Console.WriteLine(character);
+//             }
+//         }
+//     }
+// }
